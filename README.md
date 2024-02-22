@@ -50,13 +50,13 @@ To improve traceability and comprehension, the project incorporates logging to c
 
 ## Test Scripts
 
-You can find the manual test scripts that I wrote in [SauceDemo Test Scripts](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing)
+You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing)
 
 ## Usage
 
 1. Clone the repository.
 2. Set up dependencies using Maven.
-3. Configure environment-specific settings
+3. Configure environment-specific settings.
 4. Run test cases using TestNG.
 
 ## Disclaimer
