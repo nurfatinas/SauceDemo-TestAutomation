@@ -55,6 +55,6 @@ To improve traceability and comprehension, the project incorporates logging to c
 3. Configure environment-specific settings in the `config` package.
 4. Run test cases using TestNG.
 
-Feel free to explore the codebase and adapt the framework for your own projects! Contributions and improvements are always welcome. Happy testing!
+Feel free to explore the codebase and adapt the framework for your own projects!
 
 
