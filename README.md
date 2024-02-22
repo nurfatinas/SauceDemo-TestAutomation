@@ -59,6 +59,8 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts](ht
 3. Configure environment-specific settings
 4. Run test cases using TestNG.
 
+## Disclaimer
+
 Please take note that this project is currently under construction and will be subject to ongoing updates. 
 
 Feel free to examine the codebase and inform me of any possible enhancements.
