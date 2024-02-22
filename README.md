@@ -50,7 +50,7 @@ To improve traceability and comprehension, the project incorporates logging to c
 
 ## Manual Test Scripts
 
-You can find the manual test scripts in [this Google Sheets document](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing).
+You can find the manual test scripts that I wrote in [SauceDemo Testscripts](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing).
 
 ## Usage
 
