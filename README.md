@@ -61,5 +61,7 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts](ht
 
 Feel free to explore the codebase and let me know if the any improvement can be made!
 
+p/s: Please take note that this is work-in-progess and will be updated from time to time.
+
 
 -nurfatin a.s-
