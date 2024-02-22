@@ -48,7 +48,7 @@ Proficiency in data-driven testing is demonstrated by reading test data from ext
 
 To improve traceability and comprehension, the project incorporates logging to capture important events and information during test execution. Additionally, a robust reporting mechanism, such as Extent Reports, is integrated to generate comprehensive and visually appealing test reports.
 
-## Manual Test Scripts
+## Test Scripts
 
 You can find the manual test scripts that I wrote in [SauceDemo Test Scripts](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing)
 
