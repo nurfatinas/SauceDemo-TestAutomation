@@ -62,3 +62,4 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts](ht
 Feel free to explore the codebase and let me know if the any improvement can be made!
 
 
+-Nurfatin-
