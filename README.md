@@ -3,7 +3,9 @@
 Hi There! 
 
 This project documents my journey in learning Selenium with Java and showcases a robust test automation framework designed for www.saucedemo.com.
+
 SauceDemo is a sample e-commerce web application, providing users with the opportunity to explore and interact with various features commonly found on an online shopping website.
+
 The framework is structured with a keen focus on modularity, maintainability, and versatility.
 
 ## Project Structure
