@@ -95,5 +95,3 @@ public class ProductsPage extends AbstractComponents {
 	
 
 	
-
-

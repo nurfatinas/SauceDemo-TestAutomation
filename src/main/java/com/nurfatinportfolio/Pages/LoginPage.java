@@ -56,8 +56,7 @@ public class LoginPage extends AbstractComponents{
 	public String getErrorText() {
 		return errorPrompt.getText();  
 	}
-	
-	
+		
 	public void goTo(){
 		driver.get("https://www.saucedemo.com/");
 		
