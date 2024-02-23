@@ -33,12 +33,14 @@ public class LoginPage extends AbstractComponents{
 	@FindBy(css="[class='app_logo']")
 	WebElement swagLabsHeader;
 	
-	public void userLogin(String username, String password){
+	public ProductsPage userLogin(String username, String password){
 		goTo();
 		usernameInput.sendKeys(username);
 		passwordInput.sendKeys(password);
 		loginButton.click();
-
+		ProductsPage productsPage = new ProductsPage(driver);
+		
+		return productsPage;
 	}
 	
 	public boolean errorPromptExists(){
@@ -55,17 +57,6 @@ public class LoginPage extends AbstractComponents{
 		return errorPrompt.getText();  
 	}
 	
-	
-	public boolean homePageHeaderExists(){
-		try {
-			waitForWebElementToAppear(swagLabsHeader);
-			return true;
-
-		} catch(TimeoutException e) {
-			return false;
-			
-		}
-	}
 	
 	public void goTo(){
 		driver.get("https://www.saucedemo.com/");

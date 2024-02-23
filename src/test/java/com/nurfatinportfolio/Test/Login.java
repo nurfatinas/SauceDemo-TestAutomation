@@ -6,6 +6,8 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.nurfatinportfolio.Pages.ProductsPage;
 import com.nurfatinportfolio.TestComponents.BaseTest;
 import com.nurfatinportfolio.TestComponents.Retry;
 
@@ -16,10 +18,8 @@ public class Login extends BaseTest {
 	@Test(dataProvider = "getValidCred", groups = {"LoginSucess"}, retryAnalyzer = Retry.class)
 	public void testLoginWithValidCredential(HashMap<String, String> input) throws IOException, InterruptedException
 	{
-		loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertFalse(loginPage.errorPromptExists(), "Login error prompt visible!");
-		Assert.assertTrue(loginPage.homePageHeaderExists(), "User is not redirected to homepage");
-
+		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
+		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page!");
 	}
 	
 	// TC_LOGIN_002: [N] User login using invalid username or password
