@@ -1,32 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-26T13:34:26 MYT" name="Default suite" finished-at="2024-02-26T13:34:33 MYT" duration-ms="6332">
+  <suite started-at="2024-02-26T15:26:19 MYT" name="Default suite" finished-at="2024-02-26T15:26:54 MYT" duration-ms="35417">
     <groups>
+      <group name="LoginLocked">
+        <method signature="Login.testLoginWithLockedCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" name="testLoginWithLockedCredential" class="com.nurfatinportfolio.Test.Login"/>
+      </group> <!-- LoginLocked -->
+      <group name="LoginIncorrect">
+        <method signature="Login.testLoginWithBlankPassword(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" name="testLoginWithBlankPassword" class="com.nurfatinportfolio.Test.Login"/>
+        <method signature="Login.testLoginWithBlankUsername(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" name="testLoginWithBlankUsername" class="com.nurfatinportfolio.Test.Login"/>
+        <method signature="Login.testLoginWithInvalidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" name="testLoginWithInvalidCredential" class="com.nurfatinportfolio.Test.Login"/>
+      </group> <!-- LoginIncorrect -->
+      <group name="LoginSucess">
+        <method signature="Login.testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" name="testLoginWithValidCredential" class="com.nurfatinportfolio.Test.Login"/>
+      </group> <!-- LoginSucess -->
     </groups>
-    <test started-at="2024-02-26T13:34:26 MYT" name="Default test" finished-at="2024-02-26T13:34:33 MYT" duration-ms="6332">
-      <class name="com.nurfatinportfolio.Test.YourCart">
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.YourCart@1f3f02ee]" started-at="2024-02-26T13:34:27 MYT" name="launcApplication" finished-at="2024-02-26T13:34:30 MYT" duration-ms="2787" status="PASS">
+    <test started-at="2024-02-26T15:26:19 MYT" name="Default test" finished-at="2024-02-26T15:26:54 MYT" duration-ms="35417">
+      <class name="com.nurfatinportfolio.Test.Login">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:20 MYT" name="launcApplication" finished-at="2024-02-26T15:26:26 MYT" duration-ms="6129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="addProductsToCart(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.YourCart@1f3f02ee]" started-at="2024-02-26T13:34:30 MYT" name="addProductsToCart" data-provider="multipleProductsData" finished-at="2024-02-26T13:34:33 MYT" duration-ms="2987" status="PASS">
+        <test-method signature="testLoginWithBlankPassword(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:26 MYT" name="testLoginWithBlankPassword" data-provider="getBlankCred" finished-at="2024-02-26T15:26:26 MYT" duration-ms="569" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=secret_sauce, product=Sauce Labs Bolt T-Shirt, Sauce Labs Bike Light, username=standard_user}]]>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductsToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.YourCart@1f3f02ee]" started-at="2024-02-26T13:34:33 MYT" name="tearDown" finished-at="2024-02-26T13:34:33 MYT" duration-ms="113" status="PASS">
+        </test-method> <!-- testLoginWithBlankPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:26 MYT" name="tearDown" finished-at="2024-02-26T15:26:27 MYT" duration-ms="241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.nurfatinportfolio.Test.YourCart -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:27 MYT" name="launcApplication" finished-at="2024-02-26T15:26:29 MYT" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithBlankUsername(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:29 MYT" name="testLoginWithBlankUsername" data-provider="getBlankCred" finished-at="2024-02-26T15:26:29 MYT" duration-ms="497" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithBlankUsername -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:29 MYT" name="tearDown" finished-at="2024-02-26T15:26:29 MYT" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:29 MYT" name="launcApplication" finished-at="2024-02-26T15:26:31 MYT" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithInvalidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:31 MYT" name="testLoginWithInvalidCredential" data-provider="getIncorrectCred" finished-at="2024-02-26T15:26:32 MYT" duration-ms="508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=typo_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:32 MYT" name="tearDown" finished-at="2024-02-26T15:26:32 MYT" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:32 MYT" name="launcApplication" finished-at="2024-02-26T15:26:33 MYT" duration-ms="1707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithInvalidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:33 MYT" name="testLoginWithInvalidCredential" data-provider="getIncorrectCred" finished-at="2024-02-26T15:26:34 MYT" duration-ms="561" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_typo, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:34 MYT" name="tearDown" finished-at="2024-02-26T15:26:34 MYT" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:34 MYT" name="launcApplication" finished-at="2024-02-26T15:26:36 MYT" duration-ms="1730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithLockedCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:36 MYT" name="testLoginWithLockedCredential" data-provider="getLockedCred" finished-at="2024-02-26T15:26:36 MYT" duration-ms="538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=locked_out_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithLockedCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:36 MYT" name="tearDown" finished-at="2024-02-26T15:26:37 MYT" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:37 MYT" name="launcApplication" finished-at="2024-02-26T15:26:38 MYT" duration-ms="1831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:38 MYT" name="testLoginWithValidCredential" data-provider="getValidCred" finished-at="2024-02-26T15:26:39 MYT" duration-ms="617" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:39 MYT" name="tearDown" finished-at="2024-02-26T15:26:39 MYT" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:39 MYT" name="launcApplication" finished-at="2024-02-26T15:26:41 MYT" duration-ms="1871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:41 MYT" name="testLoginWithValidCredential" data-provider="getValidCred" finished-at="2024-02-26T15:26:42 MYT" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=problem_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:42 MYT" name="tearDown" finished-at="2024-02-26T15:26:42 MYT" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:42 MYT" name="launcApplication" finished-at="2024-02-26T15:26:44 MYT" duration-ms="1782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:44 MYT" name="testLoginWithValidCredential" data-provider="getValidCred" finished-at="2024-02-26T15:26:49 MYT" duration-ms="5616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=performance_glitch_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:49 MYT" name="tearDown" finished-at="2024-02-26T15:26:49 MYT" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:49 MYT" name="launcApplication" finished-at="2024-02-26T15:26:51 MYT" duration-ms="1846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:51 MYT" name="testLoginWithValidCredential" data-provider="getValidCred" finished-at="2024-02-26T15:26:52 MYT" duration-ms="571" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=error_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:52 MYT" name="tearDown" finished-at="2024-02-26T15:26:52 MYT" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:52 MYT" name="launcApplication" finished-at="2024-02-26T15:26:54 MYT" duration-ms="1936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="testLoginWithValidCredential(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:54 MYT" name="testLoginWithValidCredential" data-provider="getValidCred" finished-at="2024-02-26T15:26:54 MYT" duration-ms="669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=visual_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Login@6f3c660a]" started-at="2024-02-26T15:26:54 MYT" name="tearDown" finished-at="2024-02-26T15:26:54 MYT" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.nurfatinportfolio.Test.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

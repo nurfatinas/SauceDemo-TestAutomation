@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.util.HashMap;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.nurfatinportfolio.Pages.ProductsPage;
 import com.nurfatinportfolio.TestComponents.BaseTest;
 import com.nurfatinportfolio.TestData.ExtDataProvider;
+
 
 public class Products extends BaseTest{
 

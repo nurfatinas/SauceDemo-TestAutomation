@@ -4,9 +4,7 @@ package com.nurfatinportfolio.TestData;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-
 import org.testng.annotations.DataProvider;
-
 import com.nurfatinportfolio.TestComponents.BaseTest;
 
 public class ExtDataProvider extends BaseTest{

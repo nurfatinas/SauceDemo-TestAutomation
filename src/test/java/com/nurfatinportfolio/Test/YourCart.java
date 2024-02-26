@@ -2,6 +2,8 @@ package com.nurfatinportfolio.Test;
 
 import java.io.IOException;
 import java.util.HashMap;
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.nurfatinportfolio.Pages.ProductsPage;
@@ -23,8 +25,11 @@ public class YourCart extends BaseTest {
 	    for (String product : input.get("product").split(",")) {
 	        productsPage.addProductToCart(product.trim());
 	        System.out.println("Added product to cart: " + product.trim());
-	    }
-	}
+	 }
+		
+		
 
 	
 }
+}
+	
