@@ -11,6 +11,10 @@ import com.nurfatinportfolio.TestComponents.BaseTest;
 
 public class ExtDataProvider extends BaseTest{
 	
+	
+    /**
+     * Test data for valid userName, password and product.
+     */
 	@DataProvider
 	public Object[][] producData() throws IOException
 	{
@@ -18,14 +22,19 @@ public class ExtDataProvider extends BaseTest{
 		return new Object [][] {{data.get(0)}};	
 	}
 	
+    /**
+     * Test data for valid userName, password and multiple products.
+     */
 	@DataProvider
 	public Object[][] multipleProductsData() throws IOException
 	{
 		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\productData.json");
-		return new Object [][] {{data.get(0)}};	
+		return new Object [][] {{data.get(1)}};	
 	}
 	
-	// Test data for valid userName and password.
+    /**
+     * Test data for valid userName and password.
+     */
 	@DataProvider
 	public Object[][] getValidCred() throws IOException
 	{
@@ -33,7 +42,9 @@ public class ExtDataProvider extends BaseTest{
 		return new Object [][] {{data.get(0)}, {data.get(1)}, {data.get(2)}, {data.get(3)}, {data.get(4)}};	
 	}
 	
-	// Test data for invalid userName or password.
+	 /**
+     * Test data for invalid userName or password.
+     */
 	@DataProvider
 	public Object[][] getIncorrectCred() throws IOException
 	{
@@ -41,7 +52,9 @@ public class ExtDataProvider extends BaseTest{
 		return new Object [][] {{data.get(1)},{data.get(2)}};	
 	}
 	
-	// Test data for locked user's credential.
+	 /**
+     * Test data for locked user's credential.
+     */ 
 	@DataProvider
 	public Object[][] getLockedCred() throws IOException
 	{
@@ -49,7 +62,9 @@ public class ExtDataProvider extends BaseTest{
 		return new Object [][] {{data.get(0)}};	
 	}
 	
-	// Test data for valid userName or password.
+	 /**
+     * Test data for valid userName or password.
+     */ 
 	@DataProvider
 	public Object[][] getBlankCred() throws IOException
 	{
