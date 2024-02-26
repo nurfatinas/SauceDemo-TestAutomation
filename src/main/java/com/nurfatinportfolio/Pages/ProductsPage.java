@@ -32,12 +32,14 @@ public class ProductsPage extends AbstractComponents {
 	
 	@FindBy(css=".inventory_item_description")
 	List<WebElement> productsName;
+
 	
 	By cartIconCountBy = By.cssSelector("[class='shopping_cart_badge']");
 	By productsNameBy = By.cssSelector(".inventory_item");
 	By addToCartButtonBy = By.cssSelector(".pricebar button[class*='btn_inventory']");
 	By removeButtonBy = By.cssSelector(".pricebar button[class*='btn_inventory']");
 	
+
 	public List<WebElement> getProductsList() {
 		waitForElementToAppear(productsNameBy);
 		return productsName;
@@ -58,13 +60,13 @@ public class ProductsPage extends AbstractComponents {
 		Thread.sleep(1000);
 	}
 	
-	public String cartIconExist() throws InterruptedException
+	public String cartIconCountExist() throws InterruptedException
 	{
 		waitForWebElementToAppear(cartIconCount);
 		return cartIconCount.getText();
 	}
 	
-	public boolean cartIconNotExist() throws InterruptedException
+	public boolean cartIconCountNotExist() throws InterruptedException
 	{
 		return isElementPresent(cartIconCountBy);
 	}

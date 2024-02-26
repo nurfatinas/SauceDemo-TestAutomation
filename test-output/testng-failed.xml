@@ -3,23 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.nurfatinportfolio.Test.Products">
-        <methods>
-          <include name="tearDown"/>
-          <include name="launcApplication"/>
-          <include name="removeProductsFromCart" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.nurfatinportfolio.Test.Products -->
-=======
       <class name="com.nurfatinportfolio.Test.Login">
         <methods>
           <include name="tearDown"/>
+          <include name="testLoginWithBlankUsername"/>
           <include name="launcApplication"/>
-          <include name="testLoginWithValidCredential" invocation-numbers="2"/>
+          <include name="testLoginWithBlankPassword"/>
+          <include name="testLoginWithValidCredential"/>
         </methods>
       </class> <!-- com.nurfatinportfolio.Test.Login -->
->>>>>>> refs/remotes/origin/main
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

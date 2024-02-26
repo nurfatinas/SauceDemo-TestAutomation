@@ -2,12 +2,7 @@
 
 {
 	"username" : "standard_user",
-<<<<<<< HEAD
-	"password": "secret_sauce",
-	"product" : "Sauce Labs Bolt T-Shirt"
-=======
 	"password": "secret_sauce"
->>>>>>> refs/remotes/origin/main
 },
 
 {
