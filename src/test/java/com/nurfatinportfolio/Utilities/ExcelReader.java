@@ -1,65 +1,95 @@
 package com.nurfatinportfolio.Utilities;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
+
+import com.nurfatinportfolio.TestComponents.BaseTest;
 
 
-public class ExcelReader {
+public class ExcelReader extends BaseTest{
+
+	@Test
+	public ArrayList<String> getExcelData(String dataName) throws IOException {
 	
-	static XSSFWorkbook wb;
-	static XSSFSheet sheet;
-
-	public static String[][] getExcelData(String excelPath,String sheetName) throws IOException
-	{
-			String dataSets[][] = null;
-			File excelFile = new File(excelPath);
-			FileInputStream fis = new FileInputStream(excelFile);
-			
-			wb = new XSSFWorkbook(fis);
-			sheet = wb.getSheet(sheetName);
-			
-			int totalRow = sheet.getLastRowNum()+1;  //row start from 0
-			int totalColumn = sheet.getRow(0).getLastCellNum();
-			
-			//array start from 0, as (0,1)(0,2) so creating array with [totalRow-1][totalColumn]
-			dataSets = new String [totalRow-1][totalColumn];
-			Iterator<Row> rowIterator = sheet.iterator();
-			
-			int i = 0;
-			int j = 0;
-			while(rowIterator.hasNext())
+		ArrayList<String> a = new ArrayList<String>();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\productData.xlsx");
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    
+		try {
+	    
+		int sheets = workbook.getNumberOfSheets();
+		for (int i=0; i<sheets; i++)
+		{
+			if (workbook.getSheetName(i).equalsIgnoreCase("Data")) 
 			{
-				Row row = rowIterator.next();
-				if(i++!=0)
+				XSSFSheet sheet = workbook.getSheetAt(i);
+				
+				Iterator<Row> rows = sheet.iterator();
+				Row firstrow = rows.next();
+				
+				Iterator<Cell> ce = firstrow.cellIterator();
+				
+				int k = 0;
+				int column = 0;
+				while(ce.hasNext())
 				{
-					int k = j; //to ignore the 1st header row
-					j++;
-					//for each row now iterate through the column
-					Iterator<Cell> cellIterator = row.cellIterator();
-					int c = 0;
-					while(cellIterator.hasNext())
+					Cell value = ce.next();
+					if(value.getStringCellValue().equalsIgnoreCase("TestCases"))
 					{
-						Cell cell = cellIterator.next();
-						if(cell.getCellType()==CellType.NUMERIC)
-						{
-							// cell.getNumericCellValue() is double so converting it to string
-							dataSets[k][c++]=String.valueOf(cell.getNumericCellValue());
-						}else
-						if(cell.getCellType()==CellType.STRING)
-						{
-							dataSets[k][c++]=cell.getStringCellValue();
-							//System.out.println(cell.getStringCellValue());	
-						}
+						column = k;
+
 					}
+					k++;
 				}
+		        //System.out.println("Column: "+ column);
+		        
+		        while(rows.hasNext())
+		        {
+		        	Row r = rows.next();
+		        	if(r.getCell(column).getStringCellValue().equalsIgnoreCase(dataName))
+		        	{
+						Iterator<Cell> cv = r.cellIterator();
+				        while(cv.hasNext())
+				        {
+				        	Cell c = cv.next();
+				        	if (c.getCellType() == CellType.STRING) 
+				        	{
+				        	    a.add(c.getStringCellValue());
+				        	} else {
+				        		
+				        	    a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
+				        	}
+				        }
+		        	}
+		        	
+		        	
+		        }
 			}
-			fis.close();
-			return dataSets;
+		}
+
+		} finally {
+            // Close the workbook and file stream in a finally block to ensure they are closed even if an exception occurs.
+            if (workbook != null) {
+                workbook.close();
+            }
+            if (fis != null) {
+                fis.close();
+            }
+        }
+
+		return a;
 	}
 
 }
+	
+
+
+	
+

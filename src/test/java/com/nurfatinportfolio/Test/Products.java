@@ -14,7 +14,7 @@ public class Products extends BaseTest{
     /**
      * TC_PROD_005: [P] User able to add product(s) to Cart
      */
-	@Test (dataProvider = "producData", dataProviderClass = ExtDataProvider.class)
+	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class)
 	public void addProductsToCart(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
@@ -26,7 +26,7 @@ public class Products extends BaseTest{
     /**
      * TC_PROD_006: [P] User able to remove item(s) added to Cart from Products Page
      */
-	@Test (dataProvider = "producData", dataProviderClass = ExtDataProvider.class)
+	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class)
 	public void removeProductsFromCart(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));

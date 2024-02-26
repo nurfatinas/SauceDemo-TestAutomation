@@ -9,25 +9,14 @@ import com.nurfatinportfolio.TestComponents.BaseTest;
 
 public class ExtDataProvider extends BaseTest{
 	
-	
     /**
      * Test data for valid userName, password and product.
      */
 	@DataProvider
-	public Object[][] producData() throws IOException
+	public Object[][] getLogin() throws IOException
 	{
-		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\productData.json");
+		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\mainLogin.json");
 		return new Object [][] {{data.get(0)}};	
-	}
-	
-    /**
-     * Test data for valid userName, password and multiple products.
-     */
-	@DataProvider
-	public Object[][] multipleProductsData() throws IOException
-	{
-		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\productData.json");
-		return new Object [][] {{data.get(1)}};	
 	}
 	
     /**

@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nurfatinportfolio.Test.Login">
+      <class name="com.nurfatinportfolio.Test.YourCart">
         <methods>
           <include name="tearDown"/>
-          <include name="testLoginWithBlankUsername"/>
-          <include name="testLoginWithInvalidCredential"/>
           <include name="launcApplication"/>
-          <include name="testLoginWithLockedCredential"/>
-          <include name="testLoginWithBlankPassword"/>
-          <include name="testLoginWithValidCredential"/>
+          <include name="addProductsToCart" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.nurfatinportfolio.Test.Login -->
+      </class> <!-- com.nurfatinportfolio.Test.YourCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
