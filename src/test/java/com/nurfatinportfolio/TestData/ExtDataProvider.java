@@ -10,7 +10,7 @@ import com.nurfatinportfolio.TestComponents.BaseTest;
 public class ExtDataProvider extends BaseTest{
 	
     /**
-     * Test data for valid userName, password and product.
+     * Test data for valid userName and password.
      */
 	@DataProvider
 	public Object[][] getLogin() throws IOException

@@ -3,8 +3,6 @@ package com.nurfatinportfolio.Test;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.nurfatinportfolio.Pages.ProductsPage;
@@ -22,15 +20,19 @@ public class YourCart extends BaseTest {
 	public void addProductsToCart(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page!");
+		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 			
 		ExcelReader excelReader = new ExcelReader();
-		ArrayList<String> data = excelReader.getExcelData("Product");
+		ArrayList<String> productsData = excelReader.getExcelData("Product3");
 		
-		productsPage.addProductToCart(data.get(1));
-		productsPage.addProductToCart(data.get(2));
-		productsPage.goToCart();
-		
+		int num_items_in_cart = 0;
+		for (String product : productsData) {
+			productsPage.removeProductFromCart(product);
+			System.out.println("Product: [" +product + "] is added to Cart");
+		    num_items_in_cart++;
+		}
+		System.out.println("Total ["+ num_items_in_cart + "] product(s) added to Cart");
+		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 		
 }		
 }

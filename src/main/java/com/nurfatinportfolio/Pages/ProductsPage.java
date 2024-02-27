@@ -60,17 +60,20 @@ public class ProductsPage extends AbstractComponents {
 		Thread.sleep(1000);
 	}
 	
-	public String cartIconCountExist() throws InterruptedException
-	{
-		waitForWebElementToAppear(cartIconCount);
-		return cartIconCount.getText();
+	public int hasItemInCart() throws InterruptedException
+	{	
+	    boolean hasItemsInCart = driver.findElements(cartIconCountBy).size() > 0;
+	    
+	    if (hasItemsInCart) {
+	    	String numItemsInCart = driver.findElement(cartIconCountBy).getText();
+	        return Integer.parseInt(numItemsInCart);
+	        
+	    } 
+	    else {
+	        return 0;
+	    }
 	}
-	
-	public boolean cartIconCountNotExist() throws InterruptedException
-	{
-		return isElementPresent(cartIconCountBy);
-	}
-	
+
 	public void removeProductFromCart(String productName) throws InterruptedException
 	{
 		WebElement prod = getProductByName(productName);
