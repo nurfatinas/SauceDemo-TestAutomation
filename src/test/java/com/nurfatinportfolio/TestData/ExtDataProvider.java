@@ -33,7 +33,7 @@ public class ExtDataProvider extends BaseTest{
      * Test data for invalid userName or password.
      */
 	@DataProvider
-	public Object[][] getIncorrectCred() throws IOException
+	public Object[][] getInvalidCred() throws IOException
 	{
 		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\nurfatinportfolio\\TestData\\loginInvalidCred.json");
 		return new Object [][] {{data.get(1)},{data.get(2)}};	

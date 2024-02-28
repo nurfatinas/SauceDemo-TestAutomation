@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.nurfatinportfolio.Pages.CartPage;
+import com.nurfatinportfolio.Pages.LoginPage;
 
 public class AbstractComponents {
 	
@@ -28,6 +29,15 @@ public class AbstractComponents {
 	
 	@FindBy(css="[class='shopping_cart_badge']")
 	WebElement cartNumber;
+	
+	@FindBy(css="[id='react-burger-menu-btn']")
+	WebElement hamburgerIcon;
+	
+	@FindBy(css="[id='logout_sidebar_link']")
+	WebElement logout;
+	
+	@FindBy(css="[class='bm-menu']")
+	WebElement hamburgerMenu;
 	
 	public void waitForWebElementToAppear(WebElement element)
 	{
@@ -58,6 +68,15 @@ public class AbstractComponents {
 		CartPage cartPage = new CartPage(driver);
 		
 		return cartPage;
+	}
+	
+	public LoginPage logout() {
+		hamburgerIcon.click();
+		waitForWebElementToAppear(hamburgerMenu);
+		logout.click();
+		LoginPage loginPage = new LoginPage(driver);
+		
+		return loginPage;
 	}
 	
 	public String cartItemCount() {
