@@ -35,15 +35,11 @@ Organized with clarity, the project is divided into separate packages for essent
 
 ### Page Object Model (POM)
 
-The framework leverages the Page Object Model for creating maintainable and modular code. 
-
-Each web page is represented by a distinct class within the `Pages` package, encapsulating elements and associated actions.
+The framework leverages the Page Object Model for creating maintainable and modular code. Each web page is represented by a distinct class within the `Pages` package, encapsulating elements and associated actions.
 
 ### Test Cases
 
-The test suite encompasses positive and negative test cases, showcasing the framework's versatility. 
-
-TestNG is employed for effective test case management and execution.
+The test suite encompasses positive and negative test cases, showcasing the framework's versatility. TestNG is employed for effective test case management and execution.
 
 ### Data-Driven Testing
 
@@ -51,9 +47,7 @@ Proficiency in data-driven testing is demonstrated by reading test data from ext
 
 ### Logging and Reporting
 
-To improve traceability and comprehension, the project incorporates logging to capture important events and information during test execution. 
-
-Additionally, a robust reporting mechanism, such as Extent Reports, is integrated to generate comprehensive and visually appealing test reports.
+To improve traceability and comprehension, the project incorporates logging to capture important events and information during test execution. Additionally, a robust reporting mechanism, such as Extent Reports, is integrated to generate comprehensive and visually appealing test reports.
 
 ## Test Scripts
 
