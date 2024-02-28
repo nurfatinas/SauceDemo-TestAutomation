@@ -9,17 +9,15 @@ import com.saucedemo.TestData.TestDataProvider;
 
 public class SortingTest extends BaseTest {
 	
-
-	
+    /** in-progress 
+     * TC_SORT_001: [P] Sorting products by name in alphabetical ascending order
+     */
 	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class)
 	public void ExcelReadingData(String username, String password, String firstname, String lastname, String postal) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 		
-	    System.out.println("First Name: " + firstname);
-	    System.out.println("Last Name: " + lastname);
-	    System.out.println("Postal: " + postal);
 	}
 	
 	
