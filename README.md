@@ -13,24 +13,6 @@ The framework is structured with a keen focus on modularity, maintainability, an
 
 Organized with clarity, the project is divided into separate packages for essential components:
 
-### `src/main/java`
-
-- **AbstractComponents:** Contains abstract classes or interfaces defining common components or behaviors shared across different parts of the application.
-
-- **Pages:** Implements the Page Object Model (POM) with dedicated classes for each web page.
-
-- **Resources:** Houses resources used by the application, such as configuration files. Global data shared across different components is stored here.
-
-### `src/test/java`
-
-- **Test:** Contains diverse test cases covering various scenarios on SauceDemo.
-
-- **TestComponents:** Holds test-specific abstract classes or components that are reused across different test classes.
-
-- **TestData:** Intended to store data used in tests, such as test input data, expected results, or any other relevant data.
-
-- **Utilities:** Houses utility classes for data-driven testing and other functionalities.
-
 ## Key Features
 
 ### Page Object Model (POM)
