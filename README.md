@@ -14,10 +14,6 @@ Thanks!
 
 -Nurfatin Abdullah Shuhaimy-
 
-## Project Structure
-
-Organized with clarity, the project is divided into separate packages for essential components:
-
 ## Key Features
 
 ### Page Object Model (POM)
