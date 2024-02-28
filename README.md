@@ -62,13 +62,13 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](h
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/nurfatinas/SauceDemo-TestAutomation
+cd SauceDemo-TestAutomation
 
 
 ## Disclaimer
 
-Please take note that this project is currently under construction and will be subject to ongoing updates. 
+Please take note that this project is currently under construction and will be subject to ongoing updates.
 
 Feel free to examine the codebase and inform me of any possible enhancements.
 
