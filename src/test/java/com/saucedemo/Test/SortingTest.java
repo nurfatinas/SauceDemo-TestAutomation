@@ -17,10 +17,6 @@ public class SortingTest extends BaseTest {
 	{
 		ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
-		
 	}
-	
-	
-	
 
 }
