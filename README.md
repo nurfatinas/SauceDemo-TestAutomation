@@ -53,6 +53,17 @@ To improve traceability and comprehension, the project incorporates logging to c
 
 You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing)
 
+
+## Disclaimer
+
+Please take note that this project is currently under construction and will be subject to ongoing updates.
+
+Feel free to examine the codebase and inform me of any possible enhancements.
+
+Thanks!
+
+-Nurfatin Abdullah Shuhaimy-
+
 ## Project Setup
 
 ### Prerequisites
@@ -64,14 +75,3 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](h
 ```bash
 git clone https://github.com/nurfatinas/SauceDemo-TestAutomation
 cd SauceDemo-TestAutomation
-
-
-## Disclaimer
-
-Please take note that this project is currently under construction and will be subject to ongoing updates.
-
-Feel free to examine the codebase and inform me of any possible enhancements.
-
-Thanks!
-
--Nurfatin Abdullah Shuhaimy-
