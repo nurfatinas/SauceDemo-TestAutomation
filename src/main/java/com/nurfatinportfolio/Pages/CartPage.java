@@ -41,7 +41,6 @@ public class CartPage extends AbstractComponents {
 	    return productNames;
 	}
 	
-	
 	public String yourCartPageHeader() {
 		waitForWebElementToAppear(yourCartHeader);
 		return yourCartHeader.getText();

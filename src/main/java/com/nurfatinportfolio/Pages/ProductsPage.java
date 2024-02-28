@@ -30,18 +30,22 @@ public class ProductsPage extends AbstractComponents {
 	@FindBy(css="[class='title']")
 	WebElement productsHeader;
 	
+	@FindBy(css=".btn_inventory")
+	WebElement addToCart_single;
+	
 	@FindBy(css=".inventory_item_description")
 	List<WebElement> productsName;
-
 	
-	By cartIconCountBy = By.cssSelector("[class='shopping_cart_badge']");
-	By productsNameBy = By.cssSelector(".inventory_item");
-	By addToCartButtonBy = By.cssSelector(".pricebar button[class*='btn_inventory']");
-	By removeButtonBy = By.cssSelector(".pricebar button[class*='btn_inventory']");
-	
+	@FindBy(css=".inventory_details_back_button")
+	WebElement backToProduct;
 
+	By BY_cartIconCount = By.cssSelector("[class='shopping_cart_badge']");
+	By BY_productsName = By.cssSelector(".inventory_item");
+	By BY_addToCart = By.cssSelector(".pricebar button[class*='btn_inventory']");
+	By BY_selectProduct = By.cssSelector(".inventory_item_name");
+	
 	public List<WebElement> getProductsList() {
-		waitForElementToAppear(productsNameBy);
+		waitForElementToAppear(BY_productsName);
 		return productsName;
 	}
 	
@@ -52,20 +56,27 @@ public class ProductsPage extends AbstractComponents {
 		return prod;
 	}
 	
-	
-	public void addProductToCart(String productName) throws InterruptedException
+	public void addToCart(String productName) throws InterruptedException
 	{
 		WebElement prod = getProductByName(productName);
-		prod.findElement(addToCartButtonBy).click();
+		prod.findElement(BY_addToCart).click();
+		Thread.sleep(1000);
+	}
+	
+	public void addToCartFromPDP(String productName) throws InterruptedException
+	{
+		WebElement prod = getProductByName(productName);
+		prod.findElement(BY_selectProduct).click();
+		addToCart_single.click();
 		Thread.sleep(1000);
 	}
 	
 	public int hasItemInCart() throws InterruptedException
 	{	
-	    boolean hasItemsInCart = driver.findElements(cartIconCountBy).size() > 0;
+	    boolean hasItemsInCart = driver.findElements(BY_cartIconCount).size() > 0;
 	    
 	    if (hasItemsInCart) {
-	    	String numItemsInCart = driver.findElement(cartIconCountBy).getText();
+	    	String numItemsInCart = driver.findElement(BY_cartIconCount).getText();
 	        return Integer.parseInt(numItemsInCart);
 	        
 	    } 
@@ -77,7 +88,7 @@ public class ProductsPage extends AbstractComponents {
 	public void removeProductFromCart(String productName) throws InterruptedException
 	{
 		WebElement prod = getProductByName(productName);
-		prod.findElement(addToCartButtonBy).click();
+		prod.findElement(BY_addToCart).click();
 		Thread.sleep(1000);
 	}
 	
@@ -93,6 +104,10 @@ public class ProductsPage extends AbstractComponents {
 	public String productsPageHeader() {
 		waitForWebElementToAppear(productsHeader);
 		return productsHeader.getText();
+	}
+	
+	public void backToProducts() {
+		backToProduct.click();
 	}
 
 

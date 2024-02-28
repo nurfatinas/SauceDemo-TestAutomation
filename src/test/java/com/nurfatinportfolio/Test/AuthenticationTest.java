@@ -76,9 +76,8 @@ public class AuthenticationTest extends BaseTest {
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
 		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 		LoginPage loginPage = productsPage.logout();
-	    Assert.assertEquals(
-	            "https://www.saucedemo.com/", loginPage.getUrl(), "Logout Not Successful");
-	      }
+	    Assert.assertEquals("https://www.saucedemo.com/", loginPage.getUrl(), "Logout Not Successful");
+	}
 	
 }
 

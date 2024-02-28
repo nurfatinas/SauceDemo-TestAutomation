@@ -14,7 +14,7 @@ import com.nurfatinportfolio.TestComponents.BaseTest;
 import com.nurfatinportfolio.TestData.ExtDataProvider;
 import com.nurfatinportfolio.Utilities.ExcelReader;
 
-public class YourCart extends BaseTest {
+public class YourCartTest extends BaseTest {
 	
 	
     /**
