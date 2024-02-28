@@ -3,18 +3,18 @@
 <suite parallel = 'tests' name="Suite">
 
 <listeners>
-	<listener class-name="com.nurfatinportfolio.TestComponents.Listeners"/>
+	<listener class-name="com.saucedemo.TestComponents.Listeners"/>
 </listeners>
 	
   <test thread-count="5" name="Test">
 	    <groups>
             <run>
-                <include name="ProductDetailPage" />
+                <include name="ProductDetailPage1" />
                 <!-- Add more groups as needed -->
             </run>
         </groups>
     <classes>
-      <class name="com.nurfatinportfolio.Test.ProductTest"/>
+      <class name="com.saucedemo.Test.ProductTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

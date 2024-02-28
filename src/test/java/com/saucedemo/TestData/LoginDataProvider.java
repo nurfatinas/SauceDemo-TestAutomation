@@ -1,15 +1,15 @@
 package com.saucedemo.TestData;
 
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.testng.annotations.DataProvider;
-
 import com.saucedemo.TestComponents.BaseTest;
 
-public class ExtDataProvider extends BaseTest{
+public class LoginDataProvider extends BaseTest{
 	
+	DataFormatter formatter = new DataFormatter();
     /**
      * Test data for valid userName and password.
      */
@@ -59,5 +59,5 @@ public class ExtDataProvider extends BaseTest{
 		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\com\\saucedemo\\TestData\\loginValidCred.json");
 		return new Object [][] {{data.get(0)}};	
 	}
-	
+
 }

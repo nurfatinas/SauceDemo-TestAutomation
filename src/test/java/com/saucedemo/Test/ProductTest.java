@@ -1,15 +1,11 @@
 package com.saucedemo.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.saucedemo.Pages.ProductsPage;
 import com.saucedemo.TestComponents.BaseTest;
-import com.saucedemo.TestData.ExtDataProvider;
-import com.saucedemo.Utilities.ExcelReader;
+import com.saucedemo.TestData.TestDataProvider;
 
 
 public class ProductTest extends BaseTest{
@@ -17,82 +13,81 @@ public class ProductTest extends BaseTest{
     /**
      * TC_PROD_001: [P] User able to add product(s) to Cart
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductPage"})
-	public void addFromProductsPage(HashMap<String, String> input) throws IOException, InterruptedException
+	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class, groups = {"ProductPage"})
+	public void addFromProductsPage(String username, String password, String firstname, String lastname, String postal, String addProductList, String removeProductList) throws IOException, InterruptedException
 	{
-		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
-		
-		ExcelReader excelReader = new ExcelReader();
-		ArrayList<String> productsData = excelReader.getExcelData("Product2");
-		
-		int num_items_in_cart = 0;
-		for (String product : productsData) {
-			productsPage.addToCart(product);
-			System.out.println("Product: [" +product + "] is added to Cart");
-		    num_items_in_cart++;
-		}
-		System.out.println("Total ["+ num_items_in_cart + "] product(s) added to Cart");
-		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
+	    ProductsPage productsPage = loginPage.userLogin(username, password);
+	    Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+
+	    String[] addProducts = addProductList.split(",");
+	    
+	    // Add items to the cart
+	    int numItemsInCart = 0;
+	    for (String product : addProducts) {
+	        productsPage.addToCart(product.trim());
+	        System.out.println("Product: [" + product + "] is added to Cart");
+	        numItemsInCart++;
+	    }
+	    System.out.println("Total [" + numItemsInCart + "] product(s) added to Cart");
+	    Assert.assertEquals(productsPage.hasItemInCart(), numItemsInCart, "Total number of items in Cart is incorrect.");
 	}
 	
-    /**
+	 /**
      * TC_PROD_002: [P] User able to remove item(s) added to Cart from Products Page
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductPage"})
-	public void removeFromProductsPage(HashMap<String, String> input) throws IOException, InterruptedException
+	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class, groups = {"ProductPage"})
+	public void removeFromProductsPage(String username, String password, String firstname, String lastname, String postal, String addProductList, String removeProductList) throws IOException, InterruptedException
 	{
-		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+	    ProductsPage productsPage = loginPage.userLogin(username, password);
+	    Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+
+	    String[] addProducts = addProductList.split(",");
+	    String[] removeProducts = removeProductList.split(",");
 		
-		ExcelReader excelReader = new ExcelReader();
-		ArrayList<String> productsData = excelReader.getExcelData("Product2");
-		ArrayList<String> removeProductsData = excelReader.getExcelData("RemoveProduct1");
-		
+	    // Add items to the cart
 		int num_items_in_cart = 0;
-		for (String product : productsData) {
-			productsPage.addToCart(product);
+		for (String product : addProducts) {
+			productsPage.addToCart(product.trim());
 			System.out.println("Product: [" +product + "] is added to Cart");
 		    num_items_in_cart++;
 		}
 		System.out.println("Total ["+ num_items_in_cart + "] product(s) added to Cart");
 		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 		
-		for (String product : removeProductsData) {
-			productsPage.addToCart(product);
+	    // Remove items from the cart
+		for (String product : removeProducts) {
+			productsPage.addToCart(product.trim());
 			System.out.println("Product: [" +product + "] is removed from Cart");
 		    num_items_in_cart--;
 		}
 		System.out.println("Total ["+ num_items_in_cart + "] product(s) remaining in Cart");
 		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 	}
-
-    /**
+	
+	 /**
      * TC_PROD_003: [P] User able to add product(s) to Cart from Product Detail Page (PDP)
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductDetailPage"})
-	public void addFromProductDetailPage(HashMap<String, String> input) throws IOException, InterruptedException
+	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class, groups = {"ProductDetailPage"})
+	public void addFromProductDetailPage(String username, String password, String firstname, String lastname, String postal, String addProductList, String removeProductList) throws IOException, InterruptedException
 	{
-		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
+	    ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 		
-		ExcelReader excelReader = new ExcelReader();
-		ArrayList<String> productsData = excelReader.getExcelData("Product1");		
+	    String[] addProducts = addProductList.split(",");
 		
+	    // Add items to the cart
 	    int num_items_in_cart = 0;
-	    for (int i = 0; i < productsData.size(); i++) {
-	    	
-	        String product = productsData.get(i);
+	    for (int i = 0; i < addProducts.length; i++) {
+	        String product = addProducts[i].trim();
 	        productsPage.addToCartFromPDP(product);
 	        System.out.println("Product: [" + product + "] is added to Cart");
 	        num_items_in_cart++;
 
-	        if (i < productsData.size() - 1) {
+	        if (i < addProducts.length - 1) {
 	            productsPage.backToProducts();
 	            Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 	        }
 	    }
-	    
 		System.out.println("Total ["+ num_items_in_cart + "] product(s) added to Cart");
 		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 	}
@@ -100,48 +95,49 @@ public class ProductTest extends BaseTest{
     /**
      * TC_PROD_004: [P] User able to remove item(s) added to Cart from Product Detail Page
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductDetailPage"})
-	public void removeFromProductDetailPage(HashMap<String, String> input) throws IOException, InterruptedException
+	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class, groups = {"ProductDetailPage1"})
+	public void removeFromProductDetailPage(String username, String password, String firstname, String lastname, String postal, String addProductList, String removeProductList) throws IOException, InterruptedException
 	{
-		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
-		
-		ExcelReader excelReader = new ExcelReader();
-		ArrayList<String> productsData = excelReader.getExcelData("Product2");		
-		
-	    int num_items_in_cart = 0;
-	    for (int i = 0; i < productsData.size(); i++) {
-	    	
-	        String product = productsData.get(i);
+		ProductsPage productsPage = loginPage.userLogin(username, password);
+	    Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+
+	    String[] addProducts = addProductList.split(",");
+	    String[] removeProducts = removeProductList.split(",");
+
+	    int numItemsInCart = 0;
+
+	    // Add items to the cart
+	    for (int i = 0; i < addProducts.length; i++) {
+	        String product = addProducts[i].trim();
 	        productsPage.addToCartFromPDP(product);
 	        System.out.println("Product: [" + product + "] is added to Cart");
-	        num_items_in_cart++;
+	        numItemsInCart++;
 
-	        if (i < productsData.size() - 1) {
+	        if (i < addProducts.length - 1) {
 	            productsPage.backToProducts();
 	            Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 	        }
 	    }
+
+	    System.out.println("Total [" + numItemsInCart + "] product(s) added to Cart");
+	    Assert.assertEquals(productsPage.hasItemInCart(), numItemsInCart, "Total number of items in Cart is incorrect.");
 	    
-		System.out.println("Total ["+ num_items_in_cart + "] product(s) added to Cart");
-		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
-		
         productsPage.backToProducts();
-        
-	    for (int i = 0; i < productsData.size(); i++) {
-	    	
-	        String product = productsData.get(i);
-	        productsPage.removeProductFromPDP(product);
-	        System.out.println("Product: [" + product + "] is added to Cart");
-	        num_items_in_cart--;
 
-	        if (i < productsData.size() - 1) {
+	    // Remove items from the cart
+	    for (int i = 0; i < removeProducts.length; i++) {
+	        String product = removeProducts[i].trim();
+	        productsPage.removeProductFromPDP(product);
+	        System.out.println("Product: [" + product + "] is removed from Cart");
+	        numItemsInCart--;
+
+	        if (i < removeProducts.length - 1) {
 	            productsPage.backToProducts();
 	            Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
 	        }
 	    }
-	    
-		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 
+	    Assert.assertEquals(productsPage.hasItemInCart(), numItemsInCart, "Total number of items in Cart is incorrect.");
 	}
 }
+    
