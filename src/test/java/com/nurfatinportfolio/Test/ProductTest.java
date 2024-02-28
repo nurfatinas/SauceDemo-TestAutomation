@@ -96,10 +96,10 @@ public class ProductTest extends BaseTest{
 		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
 	}
 	
-    /** (in-progress)
+    /**
      * TC_PROD_004: [P] User able to remove item(s) added to Cart from Product Detail Page
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductDetailPage1"})
+	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"ProductDetailPage"})
 	public void removeFromProductDetailPage(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
@@ -141,7 +141,6 @@ public class ProductTest extends BaseTest{
 	    }
 	    
 		Assert.assertEquals(productsPage.hasItemInCart(), num_items_in_cart, "Total number of items in Cart is incorrect.");
-
 
 	}
 }

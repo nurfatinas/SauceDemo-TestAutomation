@@ -9,7 +9,7 @@
   <test thread-count="5" name="Test">
 	    <groups>
             <run>
-                <include name="ProductDetailPage1" />
+                <include name="ProductDetailPage" />
                 <!-- Add more groups as needed -->
             </run>
         </groups>
