@@ -20,8 +20,13 @@ import org.testng.annotations.BeforeMethod;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.saucedemo.Pages.LoginPage;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * BaseTest class serves as the foundation class for test class
+ * It contains common setup, tear down, and configuration logic required for test execution
+ * Test classes in this framework extends this class to inherit its common functionalities
+ */
 
 public class BaseTest {
 	

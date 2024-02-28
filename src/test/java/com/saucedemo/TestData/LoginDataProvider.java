@@ -10,6 +10,7 @@ import com.saucedemo.TestComponents.BaseTest;
 public class LoginDataProvider extends BaseTest{
 	
 	DataFormatter formatter = new DataFormatter();
+	
     /**
      * Test data for valid userName and password.
      */

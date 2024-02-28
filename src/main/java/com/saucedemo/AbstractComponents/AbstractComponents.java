@@ -9,9 +9,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.saucedemo.Pages.CartPage;
 import com.saucedemo.Pages.LoginPage;
+
+/**
+ * AbstractComponent class serves as a base class for page objects in this framework
+ * It contains common methods and elements shared across multiple Page Objects classes
+ * Child classes, which are the Page Object classes, must extend this class
+ * This ensures a consistent structure for page objects and promotes code re-usability
+ */
 
 public class AbstractComponents {
 	

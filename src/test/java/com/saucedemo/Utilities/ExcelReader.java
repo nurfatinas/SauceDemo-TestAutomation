@@ -12,68 +12,90 @@ import org.testng.annotations.Test;
 
 import com.saucedemo.TestComponents.BaseTest;
 
+/**
+ * ExcelReader class extends BaseTest and provides methods to read data from an Excel workbook
+ * It specifically retrieves data based on the specified column header (ProductList) from the "Data" sheet
+ */
 
 public class ExcelReader extends BaseTest{
 	
-	@Test
-	public ArrayList<String> getExcelData(String ProductList) throws IOException {
+	/**
+     * Retrieve data from the Excel workbook based on the specified column header.
+     * @param ProductList The column header indicating the data to be retrieved.
+     * @return ArrayList of strings containing the data from the specified column.
+     * @throws IOException If there is an issue reading the Excel file.
+     */
+	
+	
+    public ArrayList<String> getExcelData(String ProductList) throws IOException {
 
-	    ArrayList<String> a = new ArrayList<String>();
-	    FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\saucedemo\\TestData\\products.xlsx");
-	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+        // ArrayList to store the retrieved data
+        ArrayList<String> a = new ArrayList<String>();
 
-	    try {
-	        int sheets = workbook.getNumberOfSheets();
-	        for (int i = 0; i < sheets; i++) {
-	            if (workbook.getSheetName(i).equalsIgnoreCase("Data")) {
-	                XSSFSheet sheet = workbook.getSheetAt(i);
+        // FileInputStream to read the Excel file
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\com\\saucedemo\\TestData\\products.xlsx");
 
-	                Iterator<Row> rows = sheet.iterator();
-	                Row firstrow = rows.next();
+        // XSSFWorkbook to represent the Excel workbook
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
-	                int column = -1; // Initialize column to -1, indicating it hasn't been found yet
-	                Iterator<Cell> ce = firstrow.cellIterator();
+        try {
+            // Iterate through sheets in the workbook
+            int sheets = workbook.getNumberOfSheets();
+            for (int i = 0; i < sheets; i++) {
+                if (workbook.getSheetName(i).equalsIgnoreCase("Data")) {
+                    // Retrieve the specified sheet
+                    XSSFSheet sheet = workbook.getSheetAt(i);
 
-	                int k = 0;
-	                while (ce.hasNext()) {
-	                    Cell value = ce.next();
-	                    if (value.getStringCellValue().equalsIgnoreCase(ProductList)) {
-	                        column = k;
-	                    }
-	                    k++;
-	                }
+                    // Iterate through rows in the sheet
+                    Iterator<Row> rows = sheet.iterator();
+                    Row firstrow = rows.next();
 
-	                if (column == -1) {
-	                    throw new RuntimeException("Column with header " + ProductList + " not found in the sheet.");
-	                }
+                    // Initialize column index to -1
+                    int column = -1;
 
-	                while (rows.hasNext()) {
-	                    Row r = rows.next();
-	                    if (r.getCell(column) != null) {
-	                        Cell c = r.getCell(column);
-	                        if (c.getCellType() == CellType.STRING) {
-	                            a.add(c.getStringCellValue());
-	                        } else {
-	                            a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
-	                        }
-	                    }
-	                }
-	            }
-	        }
+                    // Iterate through cells in the first row to find the specified column header
+                    Iterator<Cell> ce = firstrow.cellIterator();
+                    int k = 0;
+                    while (ce.hasNext()) {
+                        Cell value = ce.next();
+                        if (value.getStringCellValue().equalsIgnoreCase(ProductList)) {
+                            column = k;
+                        }
+                        k++;
+                    }
 
-	    } finally {
-	        // Close the workbook and file stream in a finally block to ensure they are closed even if an exception occurs.
-	        if (workbook != null) {
-	            workbook.close();
-	        }
-	        if (fis != null) {
-	            fis.close();
-	        }
-	    }
+                    // Throw an exception if the specified column header is not found
+                    if (column == -1) {
+                        throw new RuntimeException("Column with header " + ProductList + " not found in the sheet.");
+                    }
 
-	    return a;
-	}
+                    // Iterate through remaining rows and retrieve data from the specified column
+                    while (rows.hasNext()) {
+                        Row r = rows.next();
+                        if (r.getCell(column) != null) {
+                            Cell c = r.getCell(column);
+                            if (c.getCellType() == CellType.STRING) {
+                                a.add(c.getStringCellValue());
+                            } else {
+                                a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
+                            }
+                        }
+                    }
+                }
+            }
+        } finally {
+            // Close the workbook and file stream in a finally block to ensure they are closed even if an exception occurs.
+            if (workbook != null) {
+                workbook.close();
+            }
+            if (fis != null) {
+                fis.close();
+            }
+        }
 
+        // Return the ArrayList containing the retrieved data
+        return a;
+    }
 
 }
 	

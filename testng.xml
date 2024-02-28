@@ -7,14 +7,10 @@
 </listeners>
 	
   <test thread-count="5" name="Test">
-	    <groups>
-            <run>
-                <include name="ProductDetailPage1" />
-                <!-- Add more groups as needed -->
-            </run>
-        </groups>
+
     <classes>
-      <class name="com.saucedemo.Test.ProductTest"/>
+		<class name="com.saucedemo.Test.AuthenticationTest"/>
+		<class name="com.saucedemo.Test.ProductTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
