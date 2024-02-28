@@ -30,7 +30,7 @@ public class YourCartTest extends BaseTest {
 		
 		int num_items_in_cart = 0;
 		for (String product : productsData) {
-			productsPage.removeProductFromCart(product);
+			productsPage.removeProduct(product);
 			System.out.println("Product: [" +product + "] is added to Cart");
 		    num_items_in_cart++;
 		}

@@ -9,14 +9,12 @@
   <test thread-count="5" name="Test">
 	    <groups>
             <run>
-                <include name="LoginSuccess" />
-                <include name="LoginIncorrect" />
-               <include name="LoginLocked" />
+                <include name="ProductDetailPage1" />
                 <!-- Add more groups as needed -->
             </run>
         </groups>
     <classes>
-      <class name="com.nurfatinportfolio.Test.Login"/>
+      <class name="com.nurfatinportfolio.Test.ProductTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

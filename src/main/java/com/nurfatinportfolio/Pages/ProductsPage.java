@@ -31,13 +31,16 @@ public class ProductsPage extends AbstractComponents {
 	WebElement productsHeader;
 	
 	@FindBy(css=".btn_inventory")
-	WebElement addToCart_single;
+	WebElement addRemoveProduct;
 	
 	@FindBy(css=".inventory_item_description")
 	List<WebElement> productsName;
 	
 	@FindBy(css=".inventory_details_back_button")
 	WebElement backToProduct;
+	
+	@FindBy(css=".btn_inventory")
+	WebElement removeProduct;
 
 	By BY_cartIconCount = By.cssSelector("[class='shopping_cart_badge']");
 	By BY_productsName = By.cssSelector(".inventory_item");
@@ -67,7 +70,7 @@ public class ProductsPage extends AbstractComponents {
 	{
 		WebElement prod = getProductByName(productName);
 		prod.findElement(BY_selectProduct).click();
-		addToCart_single.click();
+		addRemoveProduct.click();
 		Thread.sleep(1000);
 	}
 	
@@ -85,7 +88,15 @@ public class ProductsPage extends AbstractComponents {
 	    }
 	}
 
-	public void removeProductFromCart(String productName) throws InterruptedException
+	public void removeProductFromPDP(String productName) throws InterruptedException
+	{
+		WebElement prod = getProductByName(productName);
+		prod.findElement(BY_selectProduct).click();
+		addRemoveProduct.click();
+		Thread.sleep(1000);
+	}
+	
+	public void removeProduct(String productName) throws InterruptedException
 	{
 		WebElement prod = getProductByName(productName);
 		prod.findElement(BY_addToCart).click();

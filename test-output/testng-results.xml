@@ -2,16 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-28T11:14:32 MYT" name="Default suite" finished-at="2024-02-28T11:14:46 MYT" duration-ms="13559">
+  <suite started-at="2024-02-28T12:07:10 MYT" name="Suite" finished-at="2024-02-28T12:07:33 MYT" duration-ms="22980">
     <groups>
+      <group name="ProductDetailPage1">
+        <method signature="ProductTest.removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" name="removeFromProductDetailPage" class="com.nurfatinportfolio.Test.ProductTest"/>
+      </group> <!-- ProductDetailPage1 -->
     </groups>
-    <test started-at="2024-02-28T11:14:32 MYT" name="Default test" finished-at="2024-02-28T11:14:46 MYT" duration-ms="13559">
-      <class name="com.nurfatinportfolio.Test.Products">
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.Products@6436a7db]" started-at="2024-02-28T11:14:33 MYT" name="launcApplication" finished-at="2024-02-28T11:14:36 MYT" duration-ms="3483" status="PASS">
+    <test started-at="2024-02-28T12:07:10 MYT" name="Test" finished-at="2024-02-28T12:07:33 MYT" duration-ms="22980">
+      <class name="com.nurfatinportfolio.Test.ProductTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:10 MYT" name="launcApplication" finished-at="2024-02-28T12:07:13 MYT" duration-ms="3204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="addFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.Products@6436a7db]" started-at="2024-02-28T11:14:36 MYT" name="addFromProductDetailPage" data-provider="getLogin" finished-at="2024-02-28T11:14:46 MYT" duration-ms="9367" status="PASS">
+        <test-method signature="removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:13 MYT" name="removeFromProductDetailPage" data-provider="getLogin" finished-at="2024-02-28T12:07:33 MYT" duration-ms="19185" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,12 +24,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addFromProductDetailPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.Products@6436a7db]" started-at="2024-02-28T11:14:46 MYT" name="tearDown" finished-at="2024-02-28T11:14:46 MYT" duration-ms="206" status="PASS">
+        </test-method> <!-- removeFromProductDetailPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:33 MYT" name="tearDown" finished-at="2024-02-28T12:07:33 MYT" duration-ms="258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.nurfatinportfolio.Test.Products -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nurfatinportfolio.Test.ProductTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

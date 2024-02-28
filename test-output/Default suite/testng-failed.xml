@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nurfatinportfolio.Test.Products">
+      <class name="com.nurfatinportfolio.Test.ProductTest">
         <methods>
           <include name="tearDown"/>
-          <include name="addFromProductDetailPage" invocation-numbers="0"/>
+          <include name="removeFromProductDetailPage" invocation-numbers="0"/>
           <include name="launcApplication"/>
+          <include name="removeFromProductsPage"/>
         </methods>
-      </class> <!-- com.nurfatinportfolio.Test.Products -->
+      </class> <!-- com.nurfatinportfolio.Test.ProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

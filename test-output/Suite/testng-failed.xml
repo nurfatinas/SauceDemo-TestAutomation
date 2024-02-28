@@ -5,14 +5,19 @@
     <listener class-name="com.nurfatinportfolio.TestComponents.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="ProductDetailPage1"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.nurfatinportfolio.Test.Login">
+      <class name="com.nurfatinportfolio.Test.ProductTest">
         <methods>
           <include name="tearDown"/>
+          <include name="removeFromProductDetailPage" invocation-numbers="0"/>
           <include name="launcApplication"/>
-          <include name="testLoginWithValidCredential" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.nurfatinportfolio.Test.Login -->
+      </class> <!-- com.nurfatinportfolio.Test.ProductTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
