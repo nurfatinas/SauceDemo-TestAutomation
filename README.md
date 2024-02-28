@@ -47,9 +47,7 @@ TestNG is employed for effective test case management and execution.
 
 ### Data-Driven Testing
 
-Proficiency in data-driven testing is demonstrated by reading test data from external sources such as Json and Excel files. 
-
-This allows the same test case to run with different sets of input data, enhancing test coverage.
+Proficiency in data-driven testing is demonstrated by reading test data from external sources such as Json and Excel files. This allows the same test case to run with different sets of input data, enhancing test coverage.
 
 ### Logging and Reporting
 
