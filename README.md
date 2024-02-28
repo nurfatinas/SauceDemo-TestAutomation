@@ -7,7 +7,12 @@ This project documents my journey in learning Selenium with Java and showcases a
 
 SauceDemo is a sample e-commerce web application, providing users with the opportunity to explore and interact with various features commonly found on an online shopping website.
 
-The framework is structured with a keen focus on modularity, maintainability, and versatility.
+
+Please take note that this project is currently under construction and will be subject to ongoing updates. Feel free to examine the codebase and inform me of any possible enhancements.
+
+Thanks!
+
+-Nurfatin Abdullah Shuhaimy-
 
 ## Project Structure
 
@@ -47,16 +52,3 @@ You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](h
 ```bash
 git clone https://github.com/nurfatinas/SauceDemo-TestAutomation
 cd SauceDemo-TestAutomation
-
-
-
-
-
-
-Please take note that this project is currently under construction and will be subject to ongoing updates.
-
-Feel free to examine the codebase and inform me of any possible enhancements.
-
-Thanks!
-
--Nurfatin Abdullah Shuhaimy-
