@@ -1,20 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-28T12:07:10 MYT" name="Suite" finished-at="2024-02-28T12:07:33 MYT" duration-ms="22980">
+  <suite started-at="2024-02-28T13:09:05 MYT" name="Default suite" finished-at="2024-02-28T13:09:45 MYT" duration-ms="40401">
     <groups>
-      <group name="ProductDetailPage1">
-        <method signature="ProductTest.removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" name="removeFromProductDetailPage" class="com.nurfatinportfolio.Test.ProductTest"/>
-      </group> <!-- ProductDetailPage1 -->
+      <group name="ProductPage">
+        <method signature="ProductTest.addFromProductsPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" name="addFromProductsPage" class="com.saucedemo.Test.ProductTest"/>
+        <method signature="ProductTest.removeFromProductsPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" name="removeFromProductsPage" class="com.saucedemo.Test.ProductTest"/>
+      </group> <!-- ProductPage -->
+      <group name="ProductDetailPage">
+        <method signature="ProductTest.addFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" name="addFromProductDetailPage" class="com.saucedemo.Test.ProductTest"/>
+        <method signature="ProductTest.removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" name="removeFromProductDetailPage" class="com.saucedemo.Test.ProductTest"/>
+      </group> <!-- ProductDetailPage -->
     </groups>
-    <test started-at="2024-02-28T12:07:10 MYT" name="Test" finished-at="2024-02-28T12:07:33 MYT" duration-ms="22980">
-      <class name="com.nurfatinportfolio.Test.ProductTest">
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:10 MYT" name="launcApplication" finished-at="2024-02-28T12:07:13 MYT" duration-ms="3204" status="PASS">
+    <test started-at="2024-02-28T13:09:05 MYT" name="Default test" finished-at="2024-02-28T13:09:45 MYT" duration-ms="40401">
+      <class name="com.saucedemo.Test.ProductTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:05 MYT" name="launcApplication" finished-at="2024-02-28T13:09:08 MYT" duration-ms="2917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:13 MYT" name="removeFromProductDetailPage" data-provider="getLogin" finished-at="2024-02-28T12:07:33 MYT" duration-ms="19185" status="PASS">
+        <test-method signature="addFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:08 MYT" name="addFromProductDetailPage" data-provider="getLogin" finished-at="2024-02-28T13:09:11 MYT" duration-ms="2958" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addFromProductDetailPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:11 MYT" name="tearDown" finished-at="2024-02-28T13:09:11 MYT" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:11 MYT" name="launcApplication" finished-at="2024-02-28T13:09:13 MYT" duration-ms="1631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="addFromProductsPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:13 MYT" name="addFromProductsPage" data-provider="getLogin" finished-at="2024-02-28T13:09:17 MYT" duration-ms="4131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addFromProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:17 MYT" name="tearDown" finished-at="2024-02-28T13:09:17 MYT" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:17 MYT" name="launcApplication" finished-at="2024-02-28T13:09:18 MYT" duration-ms="1437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="removeFromProductDetailPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:18 MYT" name="removeFromProductDetailPage" data-provider="getLogin" finished-at="2024-02-28T13:09:37 MYT" duration-ms="18358" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,11 +68,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeFromProductDetailPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nurfatinportfolio.Test.ProductTest@64df9a61]" started-at="2024-02-28T12:07:33 MYT" name="tearDown" finished-at="2024-02-28T12:07:33 MYT" duration-ms="258" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:37 MYT" name="tearDown" finished-at="2024-02-28T13:09:37 MYT" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.nurfatinportfolio.Test.ProductTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:37 MYT" name="launcApplication" finished-at="2024-02-28T13:09:38 MYT" duration-ms="1480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="removeFromProductsPage(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:38 MYT" name="removeFromProductsPage" data-provider="getLogin" finished-at="2024-02-28T13:09:45 MYT" duration-ms="6689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@74f5ce22]" started-at="2024-02-28T13:09:45 MYT" name="tearDown" finished-at="2024-02-28T13:09:45 MYT" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.Test.ProductTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
