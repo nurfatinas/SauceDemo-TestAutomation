@@ -16,7 +16,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGIN_001: [P] User login using valid userName and password 
      */      
-	@Test(dataProvider = "getValidCred", dataProviderClass = ExtDataProvider.class, groups = {"LoginSucess"}, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getValidCred", dataProviderClass = ExtDataProvider.class, groups = {"Login"}, retryAnalyzer = Retry.class)
 	public void logInSuccessful_validCredential(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
@@ -26,7 +26,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGIN_002: [N] User login using invalid userName or password
      */
-	@Test(dataProvider = "getInvalidCred", dataProviderClass = ExtDataProvider.class, groups = {"LoginIncorrect"}, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getInvalidCred", dataProviderClass = ExtDataProvider.class, groups = {"Login"}, retryAnalyzer = Retry.class)
 	public void logInUnsuccessful_invalidCredential(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		loginPage.userLogin(input.get("username"), input.get("password"));
@@ -37,7 +37,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGIN_003: [N] User login using blank userName or password *blank userName
      */
-	@Test(dataProvider = "getBlankCred", dataProviderClass = ExtDataProvider.class, groups = {"LoginIncorrect"}, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getBlankCred", dataProviderClass = ExtDataProvider.class, groups = {"Login"}, retryAnalyzer = Retry.class)
 	public void logInUnsuccessful_blankUsername(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		loginPage.userLogin("", input.get("password"));
@@ -48,7 +48,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGIN_003: [N] User login using blank userName or password *blank password
      */
-	@Test(dataProvider = "getBlankCred", dataProviderClass = ExtDataProvider.class, groups = {"LoginIncorrect"}, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getBlankCred", dataProviderClass = ExtDataProvider.class, groups = {"Login"}, retryAnalyzer = Retry.class)
 	public void logInUnsuccessful_blankPassword(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		loginPage.userLogin(input.get("username"), "");
@@ -59,7 +59,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGIN_004: [N] User login using locked credential's account
      */
-	@Test(dataProvider = "getLockedCred", dataProviderClass = ExtDataProvider.class, groups = {"LoginLocked"}, retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getLockedCred", dataProviderClass = ExtDataProvider.class, groups = {"Login"}, retryAnalyzer = Retry.class)
 	public void logInUnsuccessful_locked(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		loginPage.userLogin(input.get("username"), input.get("password"));
@@ -70,7 +70,7 @@ public class AuthenticationTest extends BaseTest {
     /**
      * TC_LOGOUT_001: [N] User logout from Sauce Demo website
      */
-	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class)
+	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class, groups = {"Logout"}, retryAnalyzer = Retry.class)
 	public void logout(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
