@@ -16,8 +16,7 @@ import com.nurfatinportfolio.Utilities.ExcelReader;
 
 public class YourCartTest extends BaseTest {
 	
-	
-    /**
+    /** (in-progress)
      * TC_CART_001: [P] User able to add product(s) to cart and product(s) are displayed correctly in Your Cart Page
      */
 	@Test (dataProvider = "getLogin", dataProviderClass = ExtDataProvider.class)
