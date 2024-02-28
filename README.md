@@ -53,11 +53,18 @@ To improve traceability and comprehension, the project incorporates logging to c
 
 You can find the manual test scripts that I wrote in [SauceDemo Test Scripts.](https://docs.google.com/spreadsheets/d/10LuKWl6Zu-VmP7f06Y-976lba1XM7Zjb7WT17w1uurE/edit?usp=sharing)
 
-## Usage
+## Project Setup
 
-1. Clone the repository.
-2. Set up dependencies using Maven.
-3. Run test cases using TestNG.
+### Prerequisites
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) installed
+- [Git](https://git-scm.com/) installed
+- [Maven](https://maven.apache.org/download.cgi) installed
+
+### Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+
 
 ## Disclaimer
 
