@@ -3,10 +3,8 @@ package com.saucedemo.Test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.saucedemo.Pages.ProductsPage;
 import com.saucedemo.TestComponents.BaseTest;
 import com.saucedemo.TestData.TestDataProvider;
@@ -34,7 +32,7 @@ public class CartTest extends BaseTest {
 		}
 
 		// Initialize a map to collect product prices displayed on Products Page
-		Map<String, Double> priceInProducts = new HashMap<>();
+		Map<String, Double> priceFromPLP = new HashMap<>();
 
 		// Add items to the cart
 		int cart_count = 0;
@@ -42,8 +40,8 @@ public class CartTest extends BaseTest {
 			productsPage.addToCart(product);
 			System.out.println("Product: [" + product + "] is added to Cart");
 
-			double price = productsPage.getPriceOfProducts(product);
-			priceInProducts.put(product, price);
+			double price = productsPage.getPriceFromPLP(product);
+			priceFromPLP.put(product, price);
 
 			cart_count++;
 		}
@@ -57,13 +55,12 @@ public class CartTest extends BaseTest {
 		// Verify that prices in the Your Cart Page match prices displayed on the
 		// Products Page
 		for (String product : prod_addToCart) {
-			Double priceInCartPage = cartPage.getPriceInPage(product);
-			Double priceOfProducts = priceInProducts.get(product);
+			Double priceInCartPage = cartPage.getPriceFromPage(product);
+			Double priceOfProduct = priceFromPLP.get(product);
 
-			Assert.assertEquals(priceInCartPage, priceOfProducts,
+			Assert.assertEquals(priceInCartPage, priceOfProduct,
 					"Price in Your Cart Page do not match Price displayed on Products Page.");
 		}
-
 	}
 
 	/**

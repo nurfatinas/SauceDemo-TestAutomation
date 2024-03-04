@@ -37,12 +37,8 @@ public class CartPage extends AbstractComponents {
 	By BY_cartItem = By.cssSelector(".cart_item");
 	By BY_removeFromCart = By.cssSelector(".item_pricebar button[class*='cart_button']");
 
-	public String yourCartPageHeader() {
-		waitForWebElementToAppear(yourCartHeader);
-		return yourCartHeader.getText();
-	}
-
-	// Method to return to Products Page by clicking on Continue Shopping button
+	// Return to the product list page (PLP) by clicking on the Continue Shopping
+	// button.
 	public ProductsPage continueShopping() {
 		continueShopBtn.click();
 		ProductsPage productsPage = new ProductsPage(driver);
@@ -50,21 +46,23 @@ public class CartPage extends AbstractComponents {
 		return productsPage;
 	}
 
-	public List<WebElement> getProductsList() {
+	// Retrieves the list of products as WebElements from cart page.
+	public List<WebElement> getProductListFromCart() {
 		waitForElementToAppear(BY_cartItem);
 		return productsName;
 	}
 
-	public WebElement getProductByName(String productName) {
-		WebElement prod = getProductsList().stream()
+	// Gets a specific WebElement of product by its name from the cart page.
+	public WebElement getProductWEInCart(String productName) {
+		WebElement prod = getProductListFromCart().stream()
 				.filter(product -> product.findElement(By.cssSelector("a")).getText().equals(productName)).findFirst()
 				.orElse(null);
 		return prod;
 	}
 
-	// Method to remove product(s) from Cart by clicking on Remove button
+	// Remove product from cart by clicking on the Remove button.
 	public void removeFromCart(String productName) throws InterruptedException {
-		WebElement prod = getProductByName(productName);
+		WebElement prod = getProductWEInCart(productName);
 		prod.findElement(BY_removeFromCart).click();
 		Thread.sleep(1000);
 	}
