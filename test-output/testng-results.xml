@@ -1,17 +1,446 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="22" passed="22" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-04T14:02:52 MYT" name="Default suite" finished-at="2024-03-04T14:03:13 MYT" duration-ms="20415">
+  <suite started-at="2024-03-04T14:08:03 MYT" name="Suite" finished-at="2024-03-04T14:11:07 MYT" duration-ms="183857">
     <groups>
+      <group name="ProductDetailPage1">
+        <method signature="ProductTest.removeFromProductDetailPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" name="removeFromProductDetailPage" class="com.saucedemo.Test.ProductTest"/>
+      </group> <!-- ProductDetailPage1 -->
+      <group name="ProductPage">
+        <method signature="ProductTest.addFromProductsPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" name="addFromProductsPage" class="com.saucedemo.Test.ProductTest"/>
+        <method signature="ProductTest.removeFromProductsPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" name="removeFromProductsPage" class="com.saucedemo.Test.ProductTest"/>
+      </group> <!-- ProductPage -->
+      <group name="Logout">
+        <method signature="AuthenticationTest.logout(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logout" class="com.saucedemo.Test.AuthenticationTest"/>
+      </group> <!-- Logout -->
+      <group name="Login">
+        <method signature="AuthenticationTest.logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logInSuccessful_validCredential" class="com.saucedemo.Test.AuthenticationTest"/>
+        <method signature="AuthenticationTest.logInUnsuccessful_blankPassword(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logInUnsuccessful_blankPassword" class="com.saucedemo.Test.AuthenticationTest"/>
+        <method signature="AuthenticationTest.logInUnsuccessful_blankUsername(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logInUnsuccessful_blankUsername" class="com.saucedemo.Test.AuthenticationTest"/>
+        <method signature="AuthenticationTest.logInUnsuccessful_invalidCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logInUnsuccessful_invalidCredential" class="com.saucedemo.Test.AuthenticationTest"/>
+        <method signature="AuthenticationTest.logInUnsuccessful_locked(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" name="logInUnsuccessful_locked" class="com.saucedemo.Test.AuthenticationTest"/>
+      </group> <!-- Login -->
+      <group name="ProductDetailPage">
+        <method signature="ProductTest.addFromProductDetailPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" name="addFromProductDetailPage" class="com.saucedemo.Test.ProductTest"/>
+      </group> <!-- ProductDetailPage -->
     </groups>
-    <test started-at="2024-03-04T14:02:52 MYT" name="Default test" finished-at="2024-03-04T14:03:13 MYT" duration-ms="20415">
-      <class name="com.saucedemo.Test.SortingTest">
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:02:54 MYT" name="launcApplication" finished-at="2024-03-04T14:02:58 MYT" duration-ms="4292" status="PASS">
+    <test started-at="2024-03-04T14:08:03 MYT" name="Test" finished-at="2024-03-04T14:11:07 MYT" duration-ms="183857">
+      <class name="com.saucedemo.Test.ProductTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:05 MYT" name="launcApplication" finished-at="2024-03-04T14:10:11 MYT" duration-ms="6744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="sortProductNameAscending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:02:58 MYT" name="sortProductNameAscending" data-provider="fromExcel" finished-at="2024-03-04T14:03:00 MYT" duration-ms="2318" status="PASS">
+        <test-method signature="addFromProductDetailPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:11 MYT" name="addFromProductDetailPage" data-provider="fromExcel" finished-at="2024-03-04T14:10:17 MYT" duration-ms="5449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addFromProductDetailPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:17 MYT" name="tearDown" finished-at="2024-03-04T14:10:17 MYT" duration-ms="465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:17 MYT" name="launcApplication" finished-at="2024-03-04T14:10:21 MYT" duration-ms="3712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="addFromProductsPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:21 MYT" name="addFromProductsPage" data-provider="fromExcel" finished-at="2024-03-04T14:10:26 MYT" duration-ms="4696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addFromProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:26 MYT" name="tearDown" finished-at="2024-03-04T14:10:26 MYT" duration-ms="472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:26 MYT" name="launcApplication" finished-at="2024-03-04T14:10:30 MYT" duration-ms="3303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="removeFromProductDetailPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:30 MYT" name="removeFromProductDetailPage" data-provider="fromExcel" finished-at="2024-03-04T14:10:37 MYT" duration-ms="6886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromProductDetailPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:37 MYT" name="tearDown" finished-at="2024-03-04T14:10:37 MYT" duration-ms="498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:37 MYT" name="launcApplication" finished-at="2024-03-04T14:10:40 MYT" duration-ms="3392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="removeFromProductsPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:40 MYT" name="removeFromProductsPage" data-provider="fromExcel" finished-at="2024-03-04T14:10:46 MYT" duration-ms="5850" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeFromProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.ProductTest@b40bb6e]" started-at="2024-03-04T14:10:46 MYT" name="tearDown" finished-at="2024-03-04T14:10:47 MYT" duration-ms="476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.Test.ProductTest -->
+      <class name="com.saucedemo.Test.AuthenticationTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:08 MYT" name="launcApplication" finished-at="2024-03-04T14:08:22 MYT" duration-ms="14070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:22 MYT" name="logInSuccessful_validCredential" data-provider="getValidCred" finished-at="2024-03-04T14:08:23 MYT" duration-ms="1357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInSuccessful_validCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:23 MYT" name="tearDown" finished-at="2024-03-04T14:08:24 MYT" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:24 MYT" name="launcApplication" finished-at="2024-03-04T14:08:27 MYT" duration-ms="3476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:27 MYT" name="logInSuccessful_validCredential" data-provider="getValidCred" finished-at="2024-03-04T14:08:29 MYT" duration-ms="1554" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=problem_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInSuccessful_validCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:29 MYT" name="tearDown" finished-at="2024-03-04T14:08:29 MYT" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:29 MYT" name="launcApplication" finished-at="2024-03-04T14:08:33 MYT" duration-ms="4084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:33 MYT" name="logInSuccessful_validCredential" data-provider="getValidCred" finished-at="2024-03-04T14:08:39 MYT" duration-ms="6181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=performance_glitch_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInSuccessful_validCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:39 MYT" name="tearDown" finished-at="2024-03-04T14:08:40 MYT" duration-ms="527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:40 MYT" name="launcApplication" finished-at="2024-03-04T14:08:44 MYT" duration-ms="4442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:44 MYT" name="logInSuccessful_validCredential" data-provider="getValidCred" finished-at="2024-03-04T14:08:45 MYT" duration-ms="966" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=error_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInSuccessful_validCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:45 MYT" name="tearDown" finished-at="2024-03-04T14:08:46 MYT" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:46 MYT" name="launcApplication" finished-at="2024-03-04T14:08:49 MYT" duration-ms="3611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInSuccessful_validCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:49 MYT" name="logInSuccessful_validCredential" data-provider="getValidCred" finished-at="2024-03-04T14:08:50 MYT" duration-ms="1065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=visual_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInSuccessful_validCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:50 MYT" name="tearDown" finished-at="2024-03-04T14:08:50 MYT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:51 MYT" name="launcApplication" finished-at="2024-03-04T14:08:53 MYT" duration-ms="2640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInUnsuccessful_blankPassword(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:53 MYT" name="logInUnsuccessful_blankPassword" data-provider="getBlankCred" finished-at="2024-03-04T14:08:54 MYT" duration-ms="689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUnsuccessful_blankPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:54 MYT" name="tearDown" finished-at="2024-03-04T14:08:54 MYT" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:54 MYT" name="launcApplication" finished-at="2024-03-04T14:08:58 MYT" duration-ms="3879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInUnsuccessful_blankUsername(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:58 MYT" name="logInUnsuccessful_blankUsername" data-provider="getBlankCred" finished-at="2024-03-04T14:08:59 MYT" duration-ms="1407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUnsuccessful_blankUsername -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:59 MYT" name="tearDown" finished-at="2024-03-04T14:08:59 MYT" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:08:59 MYT" name="launcApplication" finished-at="2024-03-04T14:09:09 MYT" duration-ms="9505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInUnsuccessful_invalidCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:09 MYT" name="logInUnsuccessful_invalidCredential" data-provider="getInvalidCred" finished-at="2024-03-04T14:09:10 MYT" duration-ms="935" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=typo_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUnsuccessful_invalidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:10 MYT" name="tearDown" finished-at="2024-03-04T14:09:10 MYT" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:10 MYT" name="launcApplication" finished-at="2024-03-04T14:09:12 MYT" duration-ms="2455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInUnsuccessful_invalidCredential(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:12 MYT" name="logInUnsuccessful_invalidCredential" data-provider="getInvalidCred" finished-at="2024-03-04T14:09:15 MYT" duration-ms="2466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_typo, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUnsuccessful_invalidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:15 MYT" name="tearDown" finished-at="2024-03-04T14:09:15 MYT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:15 MYT" name="launcApplication" finished-at="2024-03-04T14:09:19 MYT" duration-ms="3693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logInUnsuccessful_locked(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:19 MYT" name="logInUnsuccessful_locked" data-provider="getLockedCred" finished-at="2024-03-04T14:09:23 MYT" duration-ms="3967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=locked_out_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUnsuccessful_locked -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:23 MYT" name="tearDown" finished-at="2024-03-04T14:09:23 MYT" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:23 MYT" name="launcApplication" finished-at="2024-03-04T14:09:28 MYT" duration-ms="5223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="logout(java.util.HashMap)[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:28 MYT" name="logout" data-provider="getLogin" finished-at="2024-03-04T14:09:30 MYT" duration-ms="1361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=secret_sauce, username=standard_user}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.AuthenticationTest@f27ea3]" started-at="2024-03-04T14:09:30 MYT" name="tearDown" finished-at="2024-03-04T14:09:30 MYT" duration-ms="526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.Test.AuthenticationTest -->
+      <class name="com.saucedemo.Test.SortingTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:47 MYT" name="launcApplication" finished-at="2024-03-04T14:10:51 MYT" duration-ms="3833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="sortProductNameAscending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:51 MYT" name="sortProductNameAscending" data-provider="fromExcel" finished-at="2024-03-04T14:10:52 MYT" duration-ms="1296" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,15 +481,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortProductNameAscending -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:00 MYT" name="tearDown" finished-at="2024-03-04T14:03:01 MYT" duration-ms="171" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:52 MYT" name="tearDown" finished-at="2024-03-04T14:10:52 MYT" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:01 MYT" name="launcApplication" finished-at="2024-03-04T14:03:03 MYT" duration-ms="2381" status="PASS">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:52 MYT" name="launcApplication" finished-at="2024-03-04T14:10:55 MYT" duration-ms="2862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="sortProductNameDescending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:03 MYT" name="sortProductNameDescending" data-provider="fromExcel" finished-at="2024-03-04T14:03:05 MYT" duration-ms="1433" status="PASS">
+        <test-method signature="sortProductNameDescending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:55 MYT" name="sortProductNameDescending" data-provider="fromExcel" finished-at="2024-03-04T14:10:57 MYT" duration-ms="1283" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,15 +530,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortProductNameDescending -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:05 MYT" name="tearDown" finished-at="2024-03-04T14:03:05 MYT" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:57 MYT" name="tearDown" finished-at="2024-03-04T14:10:57 MYT" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:05 MYT" name="launcApplication" finished-at="2024-03-04T14:03:07 MYT" duration-ms="2246" status="PASS">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:10:57 MYT" name="launcApplication" finished-at="2024-03-04T14:11:00 MYT" duration-ms="3511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="sortProductPriceAscending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:07 MYT" name="sortProductPriceAscending" data-provider="fromExcel" finished-at="2024-03-04T14:03:08 MYT" duration-ms="1415" status="PASS">
+        <test-method signature="sortProductPriceAscending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:11:00 MYT" name="sortProductPriceAscending" data-provider="fromExcel" finished-at="2024-03-04T14:11:02 MYT" duration-ms="1281" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,15 +579,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortProductPriceAscending -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:08 MYT" name="tearDown" finished-at="2024-03-04T14:03:09 MYT" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:11:02 MYT" name="tearDown" finished-at="2024-03-04T14:11:02 MYT" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:09 MYT" name="launcApplication" finished-at="2024-03-04T14:03:11 MYT" duration-ms="2470" status="PASS">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:11:02 MYT" name="launcApplication" finished-at="2024-03-04T14:11:05 MYT" duration-ms="2902" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launcApplication -->
-        <test-method signature="sortProductPriceDescending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:11 MYT" name="sortProductPriceDescending" data-provider="fromExcel" finished-at="2024-03-04T14:03:13 MYT" duration-ms="1417" status="PASS">
+        <test-method signature="sortProductPriceDescending(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:11:05 MYT" name="sortProductPriceDescending" data-provider="fromExcel" finished-at="2024-03-04T14:11:06 MYT" duration-ms="1368" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -199,11 +628,160 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortProductPriceDescending -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@1b835480]" started-at="2024-03-04T14:03:13 MYT" name="tearDown" finished-at="2024-03-04T14:03:13 MYT" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.SortingTest@3a94964]" started-at="2024-03-04T14:11:06 MYT" name="tearDown" finished-at="2024-03-04T14:11:07 MYT" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.saucedemo.Test.SortingTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.saucedemo.Test.CartTest">
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:33 MYT" name="launcApplication" finished-at="2024-03-04T14:09:37 MYT" duration-ms="4565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="addProductToCart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:37 MYT" name="addProductToCart" data-provider="fromExcel" finished-at="2024-03-04T14:09:44 MYT" duration-ms="6479" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:44 MYT" name="tearDown" finished-at="2024-03-04T14:09:44 MYT" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:44 MYT" name="launcApplication" finished-at="2024-03-04T14:09:49 MYT" duration-ms="5156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="continueShopping(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:49 MYT" name="continueShopping" data-provider="fromExcel" finished-at="2024-03-04T14:09:54 MYT" duration-ms="5066" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueShopping -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:54 MYT" name="tearDown" finished-at="2024-03-04T14:09:55 MYT" duration-ms="438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launcApplication()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:55 MYT" name="launcApplication" finished-at="2024-03-04T14:09:57 MYT" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launcApplication -->
+        <test-method signature="removeProductFromCart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:09:57 MYT" name="removeProductFromCart" data-provider="fromExcel" finished-at="2024-03-04T14:10:04 MYT" duration-ms="7267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Doe]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[54200]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sauce Labs Backpack, Sauce Labs Bike Light, Sauce Labs Bolt T-Shirt]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sauce Labs Backpack]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.Test.CartTest@7a48e6e2]" started-at="2024-03-04T14:10:04 MYT" name="tearDown" finished-at="2024-03-04T14:10:05 MYT" duration-ms="468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.Test.CartTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

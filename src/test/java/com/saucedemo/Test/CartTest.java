@@ -19,6 +19,7 @@ public class CartTest extends BaseTest {
 	@Test(dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class)
 	public void addProductToCart(String username, String password, String firstname, String lastname, String postal,
 			String addProductList, String removeProductList) throws IOException, InterruptedException {
+		
 		// Login and navigate to Products Page
 		ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page.");
@@ -70,6 +71,7 @@ public class CartTest extends BaseTest {
 	@Test(dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class)
 	public void continueShopping(String username, String password, String firstname, String lastname, String postal,
 			String addProductList, String removeProductList) throws IOException, InterruptedException {
+		
 		// Login and navigate to Products Page
 		ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page.");
@@ -107,6 +109,7 @@ public class CartTest extends BaseTest {
 	@Test(dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class)
 	public void removeProductFromCart(String username, String password, String firstname, String lastname,
 			String postal, String addProductList, String removeProductList) throws IOException, InterruptedException {
+		
 		// Login and navigate to Products Page
 		ProductsPage productsPage = loginPage.userLogin(username, password);
 		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page.");

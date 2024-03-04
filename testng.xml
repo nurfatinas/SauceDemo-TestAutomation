@@ -6,8 +6,10 @@
     </listeners>
     <test thread-count="5" name="Test">
         <classes>
+            <class name="com.saucedemo.Test.AuthenticationTest" />
+            <class name="com.saucedemo.Test.CartTest" />
             <class name="com.saucedemo.Test.ProductTest" />
-
+            <class name="com.saucedemo.Test.SortingTest" />                        
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

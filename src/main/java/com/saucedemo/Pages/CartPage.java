@@ -30,6 +30,9 @@ public class CartPage extends AbstractComponents {
 
 	@FindBy(css = "[id='continue-shopping']")
 	WebElement continueShopBtn;
+	
+	@FindBy(css = "[id='checkout']")
+	WebElement checkoutBtn;
 
 	@FindBy(css = ".cart_item_label")
 	List<WebElement> productsName;
@@ -44,6 +47,14 @@ public class CartPage extends AbstractComponents {
 		ProductsPage productsPage = new ProductsPage(driver);
 
 		return productsPage;
+	}
+	
+	// Navigate to checkout: your information page by clicking on the Checkout button.
+	public InfoPage checkout() {
+		checkoutBtn.click();
+		InfoPage infoPage = new InfoPage(driver);
+
+		return infoPage;
 	}
 
 	// Retrieves the list of products as WebElements from cart page.

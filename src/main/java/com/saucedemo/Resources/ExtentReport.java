@@ -34,7 +34,7 @@ public class ExtentReport {
 		extent.setSystemInfo("Tester", "Nurfatin Abdullah Shuhaimy");
 		
 		// Create an initial test in the report using the specified path
-		extent.createTest(path);
+		extent.createTest("Test Results - SauceDemo WebUI Automation");
 		
 		// Return the configured ExtentReports object
 		return extent;
