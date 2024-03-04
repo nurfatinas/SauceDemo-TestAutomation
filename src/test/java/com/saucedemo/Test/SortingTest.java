@@ -13,10 +13,10 @@ public class SortingTest extends BaseTest {
      * TC_SORT_001: [P] Sorting products by name in alphabetical ascending order
      */
 	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class)
-	public void ExcelReadingData(String username, String password, String firstname, String lastname, String postal) throws IOException, InterruptedException
+	public void sortByProductsNameUp(String username, String password, String firstname, String lastname, String postal) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(username, password);
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page.");
 	}
 
 }

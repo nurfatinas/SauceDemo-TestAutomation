@@ -65,19 +65,16 @@ public class Listeners extends BaseTest implements ITestListener{
 	
 	@Override
 	public void onTestSkipped(ITestResult result) {
-        // Test skipped behavior can be implemented if needed
 		
 	}
 	
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        // Test failed but within success percentage behavior can be implemented if needed
 		
 	}
 
 	@Override
 	public void onStart(ITestContext context) {
-        // Test context start behavior can be implemented if needed
 		
 	}
 

@@ -20,7 +20,7 @@ public class AuthenticationTest extends BaseTest {
 	public void logInSuccessful_validCredential(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page!");
+		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page!");
 	}
 
     /**
@@ -74,7 +74,7 @@ public class AuthenticationTest extends BaseTest {
 	public void logout(HashMap<String, String> input) throws IOException, InterruptedException
 	{
 		ProductsPage productsPage = loginPage.userLogin(input.get("username"), input.get("password"));
-		Assert.assertEquals(productsPage.productsPageHeader(), "Products", "User is not redirected to Products Page.");
+		Assert.assertEquals(productsPage.pageTitle(), "Products", "User is not redirected to Products Page.");
 		LoginPage loginPage = productsPage.logout();
 	    Assert.assertEquals("https://www.saucedemo.com/", loginPage.getUrl(), "Logout Not Successful");
 	}
