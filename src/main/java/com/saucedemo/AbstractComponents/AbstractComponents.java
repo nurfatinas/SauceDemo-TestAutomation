@@ -62,7 +62,7 @@ public class AbstractComponents {
 	List<WebElement> price_inventory;
 
 	By BY_inventoryItem = By.cssSelector(".inventory_item");
-	By BY_productPrice = By.cssSelector(".inventory_item_price");
+	By BY_inventoryPrice = By.cssSelector(".inventory_item_price");
 
 	// Waits for a WebElement to become visible on the page.
 	public void waitForWebElementToAppear(WebElement element) {
@@ -118,6 +118,12 @@ public class AbstractComponents {
 		waitForElementToAppear(BY_inventoryItem);
 		return productsName;
 	}
+	
+	// Retrieves the list of prices as WebElements from products list page (PLP).
+	public List<WebElement> getPricesListFromPLP() {
+		waitForElementToAppear(BY_inventoryPrice);
+		return productsName;
+	}
 
 	// Gets a specific WebElement of product by its name from the products list page (PLP).
 	public WebElement getProductWEInPLP(String productName) {
@@ -130,7 +136,7 @@ public class AbstractComponents {
 	// Retrieves the price of a product by its name from the products list page (PLP).
 	public double getPriceFromPLP(String productName) throws InterruptedException {
 		WebElement prod = getProductWEInPLP(productName);
-		String priceTag = prod.findElement(BY_productPrice).getText();
+		String priceTag = prod.findElement(BY_inventoryPrice).getText();
 
 		// Remove $ sign from the priceTag
 		priceTag = priceTag.replaceAll("\\$", "");
@@ -158,5 +164,7 @@ public class AbstractComponents {
 		}
 		return null;
 	}
+	
+ 
 
 }

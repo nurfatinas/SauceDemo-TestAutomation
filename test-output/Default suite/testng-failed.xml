@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.saucedemo.Test.CartTest">
+      <class name="com.saucedemo.Test.SortingTest">
         <methods>
+          <include name="sortByProductsNameUp" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="launcApplication"/>
-          <include name="removeProductFromCart" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.saucedemo.Test.CartTest -->
+      </class> <!-- com.saucedemo.Test.SortingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

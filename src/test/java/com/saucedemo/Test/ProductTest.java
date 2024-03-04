@@ -121,7 +121,7 @@ public class ProductTest extends BaseTest{
 	}
 	
     /**
-     * TC_PROD_004: [P] User able to remove item(s) added to Cart from Product Detail Page
+     * TC_PROD_004: [P] User able to remove item(s) added to Cart from Product Detail Page (PDP)
      */
 	@Test (dataProvider = "fromExcel", dataProviderClass = TestDataProvider.class, groups = {"ProductDetailPage1"})
 	public void removeFromProductDetailPage(String username, String password, String firstname, String lastname, String postal, String addProductList, String removeProductList) throws IOException, InterruptedException
